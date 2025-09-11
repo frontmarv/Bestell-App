@@ -1,8 +1,12 @@
-/* Orange Farbe: #FF8000 */
-/* Non-white background: #DCDCDC */
-/* white background: #FFFFFF */
 * {
     margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF8000;
 }
 
 nav {
@@ -21,5 +25,36 @@ nav {
 .maxWidth {
     width: 100%;
     max-width: 1920px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    border: 2px solid red;
+}
+
+.restaurant {
     border: 2px solid black;
+    width: 80vw;
+}
+
+.orange_paragraph {
+    color:#FF8000;
+}
+
+.cart {
+    border: 2px solid green;
+    width: 20vw;
+}
+
+.headimg_restaurant {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.headimg_restaurant img {
+    width: 100%;
+    height: auto;
 }
