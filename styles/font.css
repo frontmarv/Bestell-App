@@ -12,15 +12,19 @@
     font-family: 'Epunda Sans';
     src: url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff2') format('woff2'),
         url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff') format('woff');
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
 }
 
 /* Fallback */
 body {
-    font-family: 'Epunda Sans';
+    font-family: 'Epunda Sans', Arial, sans-serif;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
-/* , Arial, sans-serif */
+h2 {
+    font-family: 'Epunda Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

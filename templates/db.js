@@ -1,10 +1,10 @@
 let orderItems = {
-    "pizza": {
-        "titleImage": "images/pizza.jpg",
+    "Pizza": {
+        "titleImage": "../imgs/dishes/pizza.jpg",
         "items": [
             {
                 "name": "Margherita",
-                "description": "Klassische Pizza mit Tomatensauce, Mozzarella und frischem Basilikum.",
+                "description": "Klassische Pi^zza mit Tomatensauce, Mozzarella und frischem Basilikum.",
                 "price": 7.50
             },
             {
@@ -24,8 +24,8 @@ let orderItems = {
             }
         ]
     },
-    "burger": {
-        "titleImage": "images/pizza.jpg",
+    "Burger": {
+        "titleImage": "../imgs/dishes/burger.jpg",
         "items": [
             {
                 "name": "Classic Burger",
@@ -49,8 +49,8 @@ let orderItems = {
             }
         ]
     },
-    "getraenke": {
-        "titleImage": "images/pizza.jpg",
+    "Getraenke": {
+        "titleImage": "../imgs/dishes/beverage_cans.jpg",
         "items": [
             {
                 "name": "Cola",

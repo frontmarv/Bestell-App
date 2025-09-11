@@ -7,3 +7,7 @@
 // Man kann auf den bestellen Button drücken, danach sollte der Warenkorb geleert werden und eine Meldung kommen, dass man eine Testbestellung vorgenommen hat (kein Alert!).
 // Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
 // Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
+
+let cart = [];
+
+document.addEventListener("DOMContentLoaded", renderAllContent());
