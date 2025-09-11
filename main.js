@@ -39,3 +39,16 @@ function addMenuTitles() {
 }
 }
 
+// function addItemsNameDescPrice(){
+//     for(let i = 0; i < ; i++){
+// let getItemName = document.getElementById(`itemName${i}`);
+// let getItemDescrip = document.getElementById(`itemDescrip${i}`);
+// let getItemPrice = document.getElementById(`itemPrice${i}`);
+// let setItemName = 
+//  <h3 id="itemName${i}">Name</h3>
+//         <p id="itemDescrip${i}">Description</p>
+//         <p id="itemPrice${i}">Preis</p>
+// }
+// }
+
+       

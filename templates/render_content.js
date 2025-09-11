@@ -26,7 +26,7 @@ function renderNavMenu() {
 }
 
 function renderCategories() {
-    let category = arrayOfCategories
+    let category = arrayOfCategories;
     let categorySection = "";
     for (let i = 0; i < itemsAmount; i++) {
         let sectioninput = renderSection(category[i]);
@@ -45,9 +45,9 @@ function renderSection(sectionname) {
     for (let i = 0; i < sectionname.length; i++) {
         itemcontainer += `
         <div class="singleItem">
-        <h3>Name</h3>
-        <p>Description</p>
-        <p>Preis</p>
+        <h3 id="itemName${i}">Name</h3>
+        <p id="itemDescrip${i}">Description</p>
+        <p id="itemPrice${i}">Preis</p>
         <button class="addToCart">Add</button>
         </div>`
     }
