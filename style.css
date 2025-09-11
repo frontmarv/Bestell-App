@@ -75,9 +75,16 @@ main {
 }
 
 #nav_menu {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: auto;
     background-color: #F7F5F1;
-    padding: 10px 0px;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+#nav_menu p {
+    font-size: 1.5rem;
 }
 
 #nav_menu table {
@@ -87,26 +94,30 @@ main {
 }
 
 #nav_menu table td {
-    width: fit-content;
+    width: auto;
     padding: 0px 10px;
 
 }
 
-section {
-    border: 2px solid red;
-}
 
 .singleItem {
-    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgb(206, 204, 204);
+    padding: 10px;
+    margin: 10px 10px;
+    border-radius: 2px;
     position: relative;
 }
 
 .imgCropper {
     overflow: hidden;
-
+    margin: 10px 10px;
     height: 100px;
     object-fit: fill;
     object-position: center;
+    border-radius: 2px;
 }
 
 .section_img {
@@ -117,6 +128,13 @@ section {
     position: absolute;
     top: 0px;
     right: 0px;
+    background-color: white;
+    border-top: hidden;
+    border-left: 1px solid rgb(206, 204, 204);
+    border-bottom: 1px solid rgb(206, 204, 204);
+    border-right: hidden;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 footer {
@@ -130,4 +148,30 @@ footer {
 footer .maxWidth {
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 320px) and (max-width: 830px) {
+main {
+    flex-direction: column;
+}
+
+.restaurant {
+    width: 100vw;
+}
+.restaurant_logo {
+    width: 70px;
+}
+
+.headimg_restaurant {
+    margin-bottom: 20px;
+}
+
+.cart {
+    width: auto;
+}
+
+footer {
+    width: auto;
+}
+
 }

@@ -4,7 +4,7 @@ let orderItems = {
         "items": [
             {
                 "name": "Margherita",
-                "description": "Klassische Pi^zza mit Tomatensauce, Mozzarella und frischem Basilikum.",
+                "description": "Klassische Pizza mit Tomatensauce, Mozzarella und frischem Basilikum.",
                 "price": 7.50
             },
             {
@@ -49,7 +49,7 @@ let orderItems = {
             }
         ]
     },
-    "Getraenke": {
+    "Getränke": {
         "titleImage": "../imgs/dishes/beverage_cans.jpg",
         "items": [
             {
@@ -73,5 +73,6 @@ let orderItems = {
                 "price": 3.50
             }
         ]
-    }
+    },
 }
+

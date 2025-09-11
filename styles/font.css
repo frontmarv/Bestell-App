@@ -44,3 +44,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+section h2 {
+    margin-left: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 830px) {
+
+
+
+}

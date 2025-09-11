@@ -1,7 +1,4 @@
 let itemsAmount = Object.keys(orderItems).length;
-let Pizza = orderItems.Pizza.items;
-let Burger = orderItems.Burger.items;
-let Getraenke = orderItems.Getraenke.items;
 let gerichte = document.getElementById("render_meals");
 let arrayOfCategories = Object.keys(orderItems)
 
@@ -41,14 +38,15 @@ function renderCategories() {
 }
 
 function renderSection(sectionname) {
+    let index = orderItems[sectionname].items.length;
     let itemcontainer = "";
-    for (let i = 0; i < sectionname.length; i++) {
+    for (let i = 0; i < index; i++) {
         itemcontainer += `
         <div class="singleItem">
-        <h3 id="itemName${i}">Name</h3>
-        <p id="itemDescrip${i}">Description</p>
-        <p id="itemPrice${i}">Preis</p>
-        <button class="addToCart">Add</button>
+        <h3 id="${sectionname}itemName${i}"></h3>
+        <p id="${sectionname}itemDescrip${i}"></p>
+        <p id="${sectionname}itemPrice${i}" class="orange_paragraph"></p>
+        <button class="addToCart orange_paragraph">&#43</button>
         </div>`
     }
     return itemcontainer
