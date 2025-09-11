@@ -6,28 +6,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bestell App</title>
-    <link rel="icon" href="imgs/Favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="imgs/favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/font.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/cart.css">
+
 </head>
 
 <body>
     <nav>
         <div class="maxWidth">
-            <img class="nav_logo" src="imgs/Logo/Bestell App- Logo.svg" alt="Logo mit dem Schriftzug: Bestell App">
+            <img class="nav_logo" src="imgs/logo/Bestell App- Logo.svg" alt="Logo mit dem Schriftzug: Bestell App">
         </div>
     </nav>
 
     <main class="maxWidth">
         <div class="restaurant">
             <div class="headimg_restaurant"></div>
-            <img src="imgs/Logo/restaurant_logo.png" alt="Logo mit schwarzem Hintergrund, weiße Kochmütze und weißer Kuchen" class="restaurant_logo">
-            <h1>Super Nice Restaurant</h1>
+            <img src="imgs/logo/restaurant_logo.png" alt="Logo mit schwarzem Hintergrund, weiße Kochmütze und weißer Kuchen" class="restaurant_logo">
+            <h2>Super Nice Restaurant</h2>
             <p class="orange_paragraph">Bewertung (1,4 von 5 Sternen)</p>
+            <p>Lieferkosten: 3€</p>
+            <button>Über uns</button>
+            <div id="nav_menu"></div>
+            <div id="render_meals"></div>
         </div>
-        <div class="cart"><p>Miau</p></div>
+        <div class="cart">
+            <h2>Warenkorb</h2>
+            <div id="render_cart"></div>
+        </div>
     </main>
 
     <footer>
+        <div class="maxWidth"><p>Bilder von <a href="https://pixabay.com/de/">Pixabay</a> und <a href="https://www.pexels.com/de-de/">Pexels</a></p></div>
     </footer>
     <!-- your content here... -->
     <!-- <script src="js/scripts.js"></script> -->

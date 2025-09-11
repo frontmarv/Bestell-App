@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,11 +33,10 @@ main {
     display: flex;
     flex-direction: row;
     background-color: #FFFFFF;
-    border: 2px solid red;
+    height: 100vh;
 }
 
 .restaurant {
-    border: 2px solid black;
     width: 80vw;
 }
 
@@ -45,7 +45,6 @@ main {
 }
 
 .cart {
-    border: 2px solid green;
     width: 20vw;
 }
 
@@ -66,4 +65,18 @@ main {
     left: 40vw;
     top: 210px;
     z-index: 1;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #FF8000;
+    width: 100%;
+    padding: 20px;
+}
+footer .maxWidth {
+    display: flex;
+    justify-content: center;
 }

@@ -1,9 +1,5 @@
-// Es gibt einen Warenkorb/ Bild + Logo & Name von einem Restaurant / sowie eine Gerichteliste (grundsätzlich schickes design, angelehnt an Lieferando) 
-// Es gibt einen Header und einen Footer
-// Es wird ein großes Bild z.B. vom Essen des Restaurants ganz oben angezeigt. Das Logo liegt halb über diesem Bild. (s. z.B. Lieferando)
-// Restaurant Name, Bewertung, Beschreibung und Informationen zum Lieferpreis etc. sowie Sterne werden statisch angezeigt.
 // Die auszuwählenden Gerichte (mindestens 5 Stück) werden dynamisch über JS aus einem Objekt gerendert.
-// Es gibt einen Gerichteslider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. (optional)
+// Es gibt einen Gerichte-slider, der zu den jeweiligen Sektionen verlinkt, es sollte mindestens 3 verschiedene Kategorien geben mit jeweils mindestens 3 Gerichten, diese sollten von Bildern zur jeweiligen Kategorie getrennt sein. (optional)
 // Man soll Gerichte in den Warenkorb hinzufügen können, indem man auf das Plus beim jeweiligen Gericht drückt.
 // Im Warenkorb kann man nun für jedes einzelne enthaltene Gericht die Mengen erhöhen oder verringern sowie einzelne Gerichte komplett aus dem Warenkorb löschen.
 // Im Warenkorb wird die Gesamtsumme angezeigt
