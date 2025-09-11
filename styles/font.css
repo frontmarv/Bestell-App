@@ -21,10 +21,26 @@ body {
     font-family: 'Epunda Sans', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    color: black;
 }
 
 h2 {
     font-family: 'Epunda Sans', Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Epunda Sans', Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
 }

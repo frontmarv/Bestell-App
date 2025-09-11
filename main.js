@@ -11,3 +11,31 @@
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", renderAllContent());
+
+function addNavMenuTitles() {
+for(let i = 0; i < arrayOfCategories.length; i++){
+    let getTitle = document.getElementById(`menuItem${i}`);
+    let setTitle = arrayOfCategories[i];
+    getTitle.innerHTML = setTitle;
+    getTitle.setAttribute("href", `#${setTitle}`);
+}
+
+}
+
+function addMenuImgs(){
+for(let i = 0; i < arrayOfCategories.length; i++){
+    let img = document.getElementById(`img${i}`);
+    let path = arrayOfCategories[i];
+    let imgPath = orderItems[path].titleImage;
+    img.setAttribute("src",`${imgPath}`);
+}
+}
+
+function addMenuTitles() {
+    for(let i = 0; i < arrayOfCategories.length; i++){
+    let getHeader = document.getElementById(`header${i}`);
+    let setHeader = arrayOfCategories[i];
+    getHeader.innerHTML = setHeader;
+}
+}
+

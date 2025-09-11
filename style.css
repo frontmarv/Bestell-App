@@ -101,6 +101,18 @@ section {
     position: relative;
 }
 
+.imgCropper {
+    overflow: hidden;
+
+    height: 100px;
+    object-fit: fill;
+    object-position: center;
+}
+
+.section_img {
+    width: 100%;
+}
+
 .addToCart {
     position: absolute;
     top: 0px;

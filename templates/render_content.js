@@ -3,7 +3,7 @@ let Pizza = orderItems.Pizza.items;
 let Burger = orderItems.Burger.items;
 let Getraenke = orderItems.Getraenke.items;
 let gerichte = document.getElementById("render_meals");
-
+let arrayOfCategories = Object.keys(orderItems)
 
 
 function renderAllContent() {
@@ -11,27 +11,29 @@ function renderAllContent() {
     let content = "";
     content += renderCategories();
     gerichte.innerHTML = content;
-
+    addNavMenuTitles();
+    addMenuTitles();
+    addMenuImgs();
 
 }
 
 function renderNavMenu() {
     let navmenu = "";
     for (let i = 0; i < itemsAmount; i++) {
-        navmenu += `<td><a href="" id="menuItem${i}">Item</a></td>`
+        navmenu += `<td><a id="menuItem${i}">Item</a></td>`
     }
     document.getElementById("itemRow").innerHTML = navmenu;
 }
 
 function renderCategories() {
-    let category = Object.keys(orderItems);
+    let category = arrayOfCategories
     let categorySection = "";
     for (let i = 0; i < itemsAmount; i++) {
         let sectioninput = renderSection(category[i]);
         categorySection += `
         <section>
-            <img src="" class="section_img" id="img${i}">
-            <h3 id="header${i}"></h3> 
+            <div class="imgCropper"><img class="section_img" id="img${i}"></div>
+            <h2 id="header${i}"></h2> 
             <div id="${category[i]}">${sectioninput}</div>
         </section>`
     }
@@ -51,5 +53,4 @@ function renderSection(sectionname) {
     }
     return itemcontainer
 }
-
 
