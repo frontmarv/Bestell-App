@@ -60,8 +60,25 @@ function renderCart() {
         <div id="cartItem">
         <h3 id="cartItemName">${cart[i][0]}</h3>
         <div id="amountAndPrice">
-        <button class="orange_paragraph" onclick="decreaseAmount(this)">&#8722</button><p>${cart[i][1]}</p><button class="orange_paragraph" onclick="increaseAmount(this)">&#43</button><p>${cart[i][3]}€</p><button class="orange_paragraph" onclick="removeItemFromCart(this)">&#128465</button></div>
+        <button class="orange_paragraph" onclick="decreaseAmount(this)">&#8722</button><p>${cart[i][1]}x</p><button class="orange_paragraph" onclick="increaseAmount(this)">&#43</button><p>${cart[i][3]}€</p><button class="orange_paragraph" onclick="removeItemFromCart(this)">&#128465</button></div>
         </div>`
     }
     cartItemBox.innerHTML = cartItems;
+}
+
+function renderBillingInfo() {
+    let billingInfo = `
+    <div class="billinginfo">
+    <table>
+    <tr class="light"><td>Zwischensumme</td><td id="subtotal" class="endOfLine">€</td></tr>
+    <tr class="light"><td>Lieferkosten</td><td class="endOfLine">3€</td></tr>
+    <tr class="strong"><td>Gesamt</td><td id="totalAmount" class="endOfLine">€</td></tr>
+    </table>
+    </div>`;
+    cartItemBox.innerHTML += billingInfo;
+}
+
+function renderOrderBtn() {
+    let orderBtn = `<div class="orderBtn"><button>Place Order</button></div>`
+    cartItemBox.innerHTML += orderBtn;
 }

@@ -1,7 +1,11 @@
 let dialog = document.getElementById("ueberUns");
-
+dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+        closeDialog();
+    }
+});
 function showRenderDialog() {
-    dialog.innerHTML = `<div class="dialogBox">
+    dialog.innerHTML = `<div class="dialogBox" id="dialogBox">
     <h3>Über uns</h3>
     <p>Im Super Nice Restaurant verbinden wir Genuss, Qualität und Gastfreundschaft. Unsere
         Leidenschaft gilt dem, was wir am besten können: köstliche Pizzen, aromatische Burger und

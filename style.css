@@ -184,6 +184,8 @@ footer .maxWidth {
     justify-content: center;
 }
 
+ /* ##### Mobile View ##### */
+ 
 @media (min-width: 320px) and (max-width: 830px) {
 main {
     flex-direction: column;

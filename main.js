@@ -71,6 +71,8 @@ function addItemtoCart(btn) {
         cart.push(itemArray);
     }
     renderCart();
+    // renderBillingInfo();
+    // renderOrderBtn();
 }
 
 function findItemInCart(btn) {
