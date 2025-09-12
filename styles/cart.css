@@ -7,3 +7,21 @@
 .cart {
     border: 2px solid black;
 }
+
+#cartItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0px;
+}
+
+#cartItem h3 {
+    padding-left: 10px;
+}
+
+#amountAndPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}

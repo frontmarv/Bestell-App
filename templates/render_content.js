@@ -11,6 +11,7 @@ function renderAllContent() {
     addNavMenuTitles();
     addMenuTitles();
     addMenuImgs();
+    renderCart();
 
 }
 
@@ -46,12 +47,21 @@ function renderSection(sectionname) {
         <h3 id="${sectionname}itemName${i}"></h3>
         <p id="${sectionname}itemDescrip${i}"></p>
         <p id="${sectionname}itemPrice${i}" class="orange_paragraph"></p>
-        <button class="addToCart orange_paragraph">&#43</button>
+        <button class="addToCart orange_paragraph" onclick="addItemtoCart(this)">&#43</button>
         </div>`
     }
     return itemcontainer
 }
 
-function renderCartItem() {
-    
+function renderCart() {
+    let cartItems = "";
+    for (let i = 0; i < cart.length; i++) {
+        cartItems += `
+        <div id="cartItem">
+        <h3 id="cartItemName">${cart[i][0]}</h3>
+        <div id="amountAndPrice">
+        <button class="orange_paragraph" onclick="decreaseAmount(this)">&#8722</button><p>${cart[i][1]}</p><button class="orange_paragraph" onclick="increaseAmount(this)">&#43</button><p>${cart[i][3]}€</p><button class="orange_paragraph" onclick="removeItemFromCart(this)">&#128465</button></div>
+        </div>`
+    }
+    cartItemBox.innerHTML = cartItems;
 }
