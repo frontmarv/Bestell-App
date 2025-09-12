@@ -27,9 +27,6 @@
                 alt="Logo mit schwarzem Hintergrund, weiße Kochmütze und weißer Kuchen" class="restaurant_logo">
             <div class="fixed_infos">
                 <h2>Super Nice Restaurant</h2>
-                <button onclick="showRenderDialog()">Über uns</button>
-                <dialog id="ueberUns">
-                </dialog>
             </div>
             <div class="fixed_infos">
                 <p class="orange_paragraph">Bewertung (1,4 von 5 Sternen)</p>
@@ -44,10 +41,12 @@
             <div id="render_meals"></div>
         </div>
 
-        <div class="cart">
+        <div class="cart" id="mainCart">
             <h2>Warenkorb</h2>
             <div id="render_cart"></div>
         </div>
+        <div class="toggleCart" onclick="openDialog()"><h3>Warenkorb öffnen</h3></div>
+        <dialog id="mobileCart"><button id="closeBtn" onclick="closeDialog()">&#128473</button><div id="contentFormCart"></div></dialog>
     </main>
 
     <footer>
@@ -59,7 +58,7 @@
     <script src="templates/db.js"></script>
     <script src="templates/render_content.js"></script>
     <script src="main.js"></script>
-    <script src="templates/ueber_uns.js"></script>
+    <script src="templates/cart_dialog.js"></script>
 </body>
 
 </html>

@@ -56,8 +56,8 @@ function renderSection(sectionname) {
 function renderCart() {
 
     cartItemBox.innerHTML = renderCartItems();
-    renderCartPlaceholder();
-    if (renderCartPlaceholder() == true) {
+    let placeholder = renderCartPlaceholder();
+    if (placeholder === true) {
         cartItemBox.innerHTML += renderBillingInfo();
         cartItemBox.innerHTML += renderOrderBtn();
     }
@@ -77,12 +77,20 @@ function renderCartItems() {
 }
 
 function renderCartPlaceholder() {
-    if (cart.length < 1) {
+    if (cart.length < 1 && setOrder === false) {
         cartItemBox.innerHTML = `
         <p class="cartPlaceholder">Füge leckere Gerichte zu deiner Bestellung hinzu</p>`
         return false
-    }
-    return true
+    } else if(cart.length < 1 && setOrder === true){
+        cartItemBox.innerHTML = `
+        <p class="cartPlaceholder">
+        Ihre Test-Bestellung wurde entgegen genommen!<br>
+        Guten Appetit!
+        </p>`
+        setOrder = false;
+        return false
+    } else{return true}
+    
 }
 
 function renderBillingInfo() {
@@ -98,6 +106,6 @@ function renderBillingInfo() {
 }
 
 function renderOrderBtn() {
-    let orderBtn = `<div class="orderBtn"><button>Place Order</button></div>`
+    let orderBtn = `<div class="orderBtn" onclick="placeOrder()"><button>Place Order</button></div>`
     return orderBtn;
 }

@@ -16,7 +16,6 @@
     font-style: normal;
 }
 
-/* Fallback */
 body {
     font-family: 'Epunda Sans', Arial, sans-serif;
     font-size: 1rem;
@@ -47,11 +46,14 @@ a:hover {
 }
 
 section h2 {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 @media (min-width: 320px) and (max-width: 830px) {
 
+body {
+    font-size: 0.9rem;
+}
 
 
 }

@@ -37,14 +37,14 @@ main {
 }
 
 .restaurant {
-    width: 70vw;
+    width: 80%;
 }
 
 .fixed_infos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .fixed_infos button {
@@ -62,11 +62,7 @@ main {
 }
 
 .cart {
-    width: 30vw;
-}
-
-dialog {
-    display: none;
+    width: 20%;
 }
 
 dialog[open] {
@@ -80,8 +76,6 @@ dialog[open] {
     align-items: center;
     justify-content: center;
     border: 2px solid white;
-    background-color: rgb(110, 111, 112);
-    color: white;
     border-radius: 10px;
     padding: 20px;
     overflow: hidden;
@@ -90,14 +84,26 @@ dialog[open] {
 dialog::backdrop {
     background-color: rgba(128, 128, 128, 0.61);
 }
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: transparent;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 
-.dialogBox {
+#closeBtn:active {
+    color: red;
+}
+
+#contentFormCart{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 90%;
+    height: 100%;
+    width: 100%;
 }
 
 .headimg_restaurant {
@@ -108,7 +114,6 @@ dialog::backdrop {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .restaurant_logo {
@@ -124,7 +129,7 @@ dialog::backdrop {
     flex-direction: row;
     width: auto;
     background-color: #F7F5F1;
-    padding: 10px 10px;
+    padding: 10px 20px;
     align-items: center;
 }
 
@@ -151,17 +156,17 @@ dialog::backdrop {
     gap: 10px;
     border: 1px solid rgb(206, 204, 204);
     padding: 10px;
-    margin: 10px 10px;
+    margin: 10px 20px;
     border-radius: 2px;
     position: relative;
 }
 
 .imgCropper {
     overflow: hidden;
-    margin: 10px 10px;
-    height: 100px;
+    margin: 10px 20px;
+    height: 150px;
     object-fit: fill;
-    object-position: center;
+    object-position: top;
     border-radius: 2px;
 }
 
@@ -181,9 +186,14 @@ dialog::backdrop {
     font-size: 2rem;
     cursor: pointer;
 }
+
 .addToCart:active {
     background-color: #FF8000;
     color: white;
+}
+
+.toggleCart {
+    display: none;
 }
 
 footer {
@@ -206,12 +216,17 @@ footer .maxWidth {
         flex-direction: column;
     }
 
+    .cart {
+        display: none;
+    }
+
     .restaurant {
         width: 100vw;
     }
 
     .restaurant_logo {
         width: 70px;
+        left: 45vw;
     }
 
     .headimg_restaurant {
@@ -222,14 +237,30 @@ footer .maxWidth {
         width: auto;
     }
 
+    .imgCropper {
+        height: 100px;
+    }
+
     dialog[open] {
         left: 4%;
         width: 80vw;
         height: 50vh;
     }
 
-    .dialogBox {
-        gap: 10px;
+    .toggleCart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+    }
+    .toggleCart:hover {
+        background-color: rgb(35, 129, 236);
     }
 
     footer {

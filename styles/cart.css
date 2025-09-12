@@ -17,17 +17,18 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 5px 0px;
+    padding: 15px 30px 0px 30px;
 }
 
-#cartItem h3 {
-    padding-left: 10px;
+#render_cart {
+    position: sticky;
+    top: 15px;
 }
 
 #amountAndPrice {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -39,9 +40,8 @@
 }
 
 .billinginfo {
-    padding: 10px 30px 10px 10px;
+    padding: 10px 30px 10px 30px;
     border-top: 1px solid rgb(203, 199, 199);
-    ;
 }
 
 .billinginfo table {
@@ -53,7 +53,7 @@
 }
 
 .endOfLine {
-text-align: end;
+    text-align: end;
 }
 
 .light {
@@ -66,6 +66,42 @@ text-align: end;
     align-items: center;
 }
 
+.orderBtn button {
+    background-color: white;
+    border: 2px solid #FF8000;
+    border-radius: 3px;
+}
+
+.orderBtn button:hover {
+    background-color: #ff80005b;
+}
+.orderBtn button:active {
+    background-color: #FF8000;
+    color: white;
+    border: 2px solid white;
+
+}
+
+
+/* ##### Tablet View ##### */
+@media (min-width: 831px) and (max-width: 1100px) {
+
+    .cart {
+        overflow-y: scroll;
+    }
+
+    #cartItem {
+
+        padding: 15px 10px 0px 10px;
+    }
+
+    .billinginfo {
+        padding: 10px 10px 10px 10px;
+
+    }
+
+}
+
 /* ##### Mobile View ##### */
 
 @media (min-width: 320px) and (max-width: 830px) {
@@ -74,4 +110,11 @@ text-align: end;
         overflow-y: scroll;
     }
 
+    #render_cart {
+        width: 80%;
+    }
+
+    #cartItem {
+        width: 100%;
+    }
 }

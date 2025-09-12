@@ -1,12 +1,11 @@
 
-// Im Warenkorb wird die Gesamtsumme angezeigt
-// ggf. mit Zwischensumme zwecks Lieferkosten etc. (optional)
-// Man kann auf den bestellen Button drücken, danach sollte der Warenkorb geleert werden und eine Meldung kommen, dass man eine Testbestellung vorgenommen hat (kein Alert!).
+
 // Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
 // Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
 
 // cart_item = [name, amount, price, totalPrice]
 let cart = [];
+let setOrder = false;
 
 let cartItemBox = document.getElementById("render_cart");
 
@@ -110,3 +109,8 @@ function calcSubtotal(){
     return subtotal
 }
 
+function placeOrder(){
+    cart = [];
+    setOrder = true;
+    renderCart();
+}
