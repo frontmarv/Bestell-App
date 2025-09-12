@@ -71,8 +71,6 @@ function addItemtoCart(btn) {
         cart.push(itemArray);
     }
     renderCart();
-    // renderBillingInfo();
-    // renderOrderBtn();
 }
 
 function findItemInCart(btn) {
@@ -103,4 +101,12 @@ function decreaseAmount(btn) {
     renderCart();
 }
 
+function calcSubtotal(){
+    let subtotal = 0;
+    for (let i = 0; i < cart.length; i++) {
+        subtotal += cart[i][3];
+    }
+    let subTotal = document.getElementById("subtotal");
+    return subtotal
+}
 

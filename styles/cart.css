@@ -6,7 +6,11 @@
 
 .cart {
     box-shadow: -2px 0 5px -2px #888;
-    overflow-y: scroll;
+}
+
+.cartPlaceholder {
+    margin: 20px 5px;
+    padding: 5px;
 }
 
 #cartItem {
@@ -35,19 +39,39 @@
 }
 
 .billinginfo {
-    padding: 10px 10px;
+    padding: 10px 30px 10px 10px;
+    border-top: 1px solid rgb(203, 199, 199);
+    ;
 }
 
 .billinginfo table {
     width: 100%
 }
 
+.billinginfo td {
+    width: 50%;
+}
+
+.endOfLine {
+text-align: end;
+}
+
 .light {
-    color:rgb(90, 88, 88);
+    color: rgb(90, 88, 88);
 }
 
 .orderBtn {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ##### Mobile View ##### */
+
+@media (min-width: 320px) and (max-width: 830px) {
+
+    .cart {
+        overflow-y: scroll;
+    }
+
 }

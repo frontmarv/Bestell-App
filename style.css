@@ -37,7 +37,7 @@ main {
 }
 
 .restaurant {
-    width: 80vw;
+    width: 70vw;
 }
 
 .fixed_infos {
@@ -47,12 +47,22 @@ main {
     padding: 10px;
 }
 
+.fixed_infos button {
+    background-color: white;
+    border: 1px solid rgb(206, 204, 204);
+    cursor: pointer;
+}
+
+.fixed_infos button:hover {
+    background-color: #FF8000;
+}
+
 .orange_paragraph {
     color: #FF8000;
 }
 
 .cart {
-    width: 20vw;
+    width: 30vw;
 }
 
 dialog {
@@ -170,6 +180,10 @@ dialog::backdrop {
     border-right: hidden;
     font-size: 2rem;
     cursor: pointer;
+}
+.addToCart:active {
+    background-color: #FF8000;
+    color: white;
 }
 
 footer {
