@@ -52,3 +52,6 @@ function renderSection(sectionname) {
     return itemcontainer
 }
 
+function renderCartItem() {
+    
+}
