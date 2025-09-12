@@ -38,6 +38,10 @@
     cursor: pointer;
     font-size: 1.5rem;
 }
+#amountAndPrice p {
+    width: 55px;
+    text-align: center;
+}
 
 .billinginfo {
     padding: 10px 30px 10px 30px;
@@ -87,7 +91,8 @@
 
 
 /* ##### Tablet View ##### */
-@media (min-width: 831px) and (max-width: 1100px) {
+@media (min-width: 831px) and (max-width: 1300px) {
+
 
     .cart {
         overflow-y: scroll;

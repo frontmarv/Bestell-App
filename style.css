@@ -10,6 +10,10 @@ body {
     background-color: #FF8000;
 }
 
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -37,7 +41,7 @@ main {
 }
 
 .restaurant {
-    width: 80%;
+    width: 70%;
 }
 
 .fixed_infos {
@@ -62,7 +66,7 @@ main {
 }
 
 .cart {
-    width: 20%;
+    width: 30%;
 }
 
 dialog[open] {
@@ -84,6 +88,7 @@ dialog[open] {
 dialog::backdrop {
     background-color: rgba(128, 128, 128, 0.61);
 }
+
 #closeBtn {
     position: absolute;
     top: 0;
@@ -98,7 +103,7 @@ dialog::backdrop {
     color: red;
 }
 
-#contentFormCart{
+#contentFormCart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,7 +124,7 @@ dialog::backdrop {
 .restaurant_logo {
     width: 100px;
     position: absolute;
-    left: 40vw;
+    left: calc(100vw / 2.9);
     top: 210px;
     z-index: 1;
 }
@@ -209,6 +214,7 @@ footer .maxWidth {
     justify-content: center;
 }
 
+
 /* ##### Mobile View ##### */
 
 @media (min-width: 320px) and (max-width: 830px) {
@@ -226,7 +232,7 @@ footer .maxWidth {
 
     .restaurant_logo {
         width: 70px;
-        left: 45vw;
+        left: 43vw;
     }
 
     .headimg_restaurant {
@@ -259,6 +265,7 @@ footer .maxWidth {
         color: white;
         cursor: pointer;
     }
+
     .toggleCart:hover {
         background-color: rgb(35, 129, 236);
     }
