@@ -1,16 +1,17 @@
-
-
-// Wenn viele Gerichte im Warenkorb sind, sollte nichts aus dem Container herauslaufen.
-// Der Desktop-Warenkorb sollte immer oben an der Seite angeheftet sein, außer man ist ganz oben oder unten auf der Seite. (sticky)
-
 // cart_item = [name, amount, price, totalPrice]
 let cart = [];
 let setOrder = false;
 
+// Saving to local Storage
+function saveToLocalStorage() {
+    let storageItem = JSON.stringify(cart);
+    localStorage.setItem("cart", storageItem);
+}
+
 let cartItemBox = document.getElementById("render_cart");
 
+arrayOfCategories.forEach(addItemsNameDescPrice);
 document.addEventListener("DOMContentLoaded", renderAllContent());
-
 
 function addNavMenuTitles() {
     for (let i = 0; i < arrayOfCategories.length; i++) {
@@ -19,7 +20,6 @@ function addNavMenuTitles() {
         getTitle.innerHTML = setTitle;
         getTitle.setAttribute("href", `#${setTitle}`);
     }
-
 }
 
 function addMenuImgs() {
@@ -38,8 +38,6 @@ function addMenuTitles() {
         getHeader.innerHTML = setHeader;
     }
 }
-
-arrayOfCategories.forEach(addItemsNameDescPrice);
 
 function addItemsNameDescPrice(currentValue) {
     let length = orderItems[currentValue].items.length;
@@ -69,6 +67,7 @@ function addItemtoCart(btn) {
     } else {
         cart.push(itemArray);
     }
+    saveToLocalStorage();
     renderCart();
 }
 
@@ -82,6 +81,7 @@ function findItemInCart(btn) {
 
 function removeItemFromCart(btn) {
     cart.splice(findItemInCart(btn), 1);
+    saveToLocalStorage();
     renderCart();
 }
 
@@ -89,28 +89,37 @@ function increaseAmount(btn) {
     let index = findItemInCart(btn);
     cart[index][1] += 1;
     cart[index][3] += cart[index][2];
+    saveToLocalStorage();
     renderCart();
 }
 
 function decreaseAmount(btn) {
     let index = findItemInCart(btn);
     cart[index][1] -= 1;
-    if(cart[index][1] === 0){removeItemFromCart(btn)}
-    else {cart[index][3] -= cart[index][2];}
+    if (cart[index][1] === 0) { removeItemFromCart(btn) }
+    else { cart[index][3] -= cart[index][2]; }
+    saveToLocalStorage();
     renderCart();
 }
 
-function calcSubtotal(){
+function calcSubtotal() {
     let subtotal = 0;
     for (let i = 0; i < cart.length; i++) {
         subtotal += cart[i][3];
     }
     let subTotal = document.getElementById("subtotal");
-    return subtotal
+    return subtotal.toFixed(2)
 }
 
-function placeOrder(){
+function calcTotal() {
+    let total = Number(calcSubtotal() + 3);
+        return total.toFixed(2)
+}
+
+function placeOrder() {
     cart = [];
     setOrder = true;
+    localStorage.clear();
     renderCart();
 }
+

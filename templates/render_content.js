@@ -2,8 +2,8 @@ let itemsAmount = Object.keys(orderItems).length;
 let gerichte = document.getElementById("render_meals");
 let arrayOfCategories = Object.keys(orderItems)
 
-
 function renderAllContent() {
+    cart = JSON.parse(localStorage.getItem("cart"));
     renderNavMenu();
     let content = "";
     content += renderCategories();
@@ -47,7 +47,7 @@ function renderSection(sectionname) {
         <h3 id="${sectionname}itemName${i}"></h3>
         <p id="${sectionname}itemDescrip${i}"></p>
         <p id="${sectionname}itemPrice${i}" class="orange_paragraph"></p>
-        <button class="addToCart orange_paragraph" onclick="addItemtoCart(this)">&#43</button>
+        <button class="addToCart orange_paragraph tooltip" onclick="addItemtoCart(this)">&#43</button>
         </div>`
     }
     return itemcontainer
@@ -70,7 +70,11 @@ function renderCartItems() {
         <div id="cartItem">
         <h3 id="cartItemName">${cart[i][0]}</h3>
         <div id="amountAndPrice">
-        <button class="orange_paragraph" onclick="decreaseAmount(this)">&#8722</button><p>${cart[i][1]}x</p><button class="orange_paragraph" onclick="increaseAmount(this)">&#43</button><p>${cart[i][3]}€</p><button class="orange_paragraph" onclick="removeItemFromCart(this)">&#128465</button></div>
+        <button class="orange_paragraph tooltip" onclick="decreaseAmount(this)">&#8722</button>
+        <p>${cart[i][1]}x</p>
+        <button class="orange_paragraph tooltip" onclick="increaseAmount(this)">&#43</button>
+        <p>${cart[i][3]}€</p>
+        <button class="orange_paragraph tooltip" onclick="removeItemFromCart(this)">&#128465</button></div>
         </div>`
     }
     return cartItems
@@ -98,8 +102,8 @@ function renderBillingInfo() {
     <div class="billinginfo">
     <table>
     <tr class="light"><td>Zwischensumme</td><td id="subtotal" class="endOfLine">${calcSubtotal()}€</td></tr>
-    <tr class="light"><td>Lieferkosten</td><td class="endOfLine">3€</td></tr>
-    <tr class="strong"><td>Gesamt</td><td id="totalAmount" class="endOfLine"> ${calcSubtotal() + 3}€</td></tr>
+    <tr class="light"><td>Lieferkosten</td><td class="endOfLine">3.00€</td></tr>
+    <tr class="strong"><td>Gesamt</td><td id="totalAmount" class="endOfLine"> ${calcTotal()}€</td></tr>
     </table>
     </div>`;
     return billingInfo;

@@ -72,7 +72,7 @@ main {
 dialog[open] {
     top: 20%;
     left: 35%;
-    position: absolute;
+    position: fixed;
     display: flex;
     width: 40vw;
     height: 40vh;
@@ -93,7 +93,7 @@ dialog::backdrop {
     position: absolute;
     top: 0;
     right: 0;
-    border: transparent;
+    border: none;
     background-color: transparent;
     font-size: 1.5rem;
     cursor: pointer;
@@ -114,7 +114,6 @@ dialog::backdrop {
 .headimg_restaurant {
     width: 100%;
     height: 150px;
-    overflow: hidden;
     background-image: url("imgs/dishes/mixed_food.jpg");
     background-position: top;
     background-size: cover;
@@ -123,9 +122,9 @@ dialog::backdrop {
 
 .restaurant_logo {
     width: 100px;
-    position: absolute;
-    left: calc(100vw / 2.9);
-    top: 210px;
+    position: relative;
+    left: 45%;
+    top: 100px;
     z-index: 1;
 }
 
@@ -151,9 +150,7 @@ dialog::backdrop {
 #nav_menu table td {
     width: auto;
     padding: 0px 10px;
-
 }
-
 
 .singleItem {
     display: flex;
@@ -205,7 +202,7 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #FF8000;
-    width: 100%;
+    width: auto;
     padding: 20px;
 }
 
@@ -232,7 +229,7 @@ footer .maxWidth {
 
     .restaurant_logo {
         width: 70px;
-        left: 43vw;
+        left: 41%;
     }
 
     .headimg_restaurant {
