@@ -10,7 +10,6 @@ function saveToLocalStorage() {
 
 let cartItemBox = document.getElementById("render_cart");
 
-arrayOfCategories.forEach(addItemsNameDescPrice);
 document.addEventListener("DOMContentLoaded", renderAllContent());
 
 function addNavMenuTitles() {
@@ -38,6 +37,8 @@ function addMenuTitles() {
         getHeader.innerHTML = setHeader;
     }
 }
+
+arrayOfCategories.forEach(addItemsNameDescPrice);
 
 function addItemsNameDescPrice(currentValue) {
     let length = orderItems[currentValue].items.length;

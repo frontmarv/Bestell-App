@@ -1,37 +1,27 @@
 @font-face {
-    font-family: 'Epunda Sans';
-    src: url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff2') format('woff2'),
-        url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff') format('woff');
+    font-family: 'Inter';
+    src: url('../imgs/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
-
-@font-face {
-    font-family: 'Epunda Sans';
-    src: url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff2') format('woff2'),
-        url('../imgs/fonts/epundasans-variablefont_wght-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
 body {
-    font-family: 'Epunda Sans', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: black;
 }
 
 h2 {
-    font-family: 'Epunda Sans', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 1.7rem;
     font-weight: bold;
 }
 
 h3 {
-    font-family: 'Epunda Sans', Arial, sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 

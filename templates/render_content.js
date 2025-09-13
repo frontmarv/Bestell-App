@@ -2,8 +2,13 @@ let itemsAmount = Object.keys(orderItems).length;
 let gerichte = document.getElementById("render_meals");
 let arrayOfCategories = Object.keys(orderItems)
 
+function initalCartSetting() {
+    let webStorage = JSON.parse(localStorage.getItem("cart"));
+    if (webStorage != null) { cart = JSON.parse(localStorage.getItem("cart")); }
+}
+
 function renderAllContent() {
-    cart = JSON.parse(localStorage.getItem("cart"));
+    initalCartSetting();
     renderNavMenu();
     let content = "";
     content += renderCategories();
@@ -47,7 +52,7 @@ function renderSection(sectionname) {
         <h3 id="${sectionname}itemName${i}"></h3>
         <p id="${sectionname}itemDescrip${i}"></p>
         <p id="${sectionname}itemPrice${i}" class="orange_paragraph"></p>
-        <button class="addToCart orange_paragraph tooltip" onclick="addItemtoCart(this)">&#43</button>
+        <button class="addToCart orange_paragraph" onclick="addItemtoCart(this)">&#43</button>
         </div>`
     }
     return itemcontainer
@@ -70,11 +75,11 @@ function renderCartItems() {
         <div id="cartItem">
         <h3 id="cartItemName">${cart[i][0]}</h3>
         <div id="amountAndPrice">
-        <button class="orange_paragraph tooltip" onclick="decreaseAmount(this)">&#8722</button>
+        <button class="orange_paragraph" onclick="decreaseAmount(this)">&#8722</button>
         <p>${cart[i][1]}x</p>
-        <button class="orange_paragraph tooltip" onclick="increaseAmount(this)">&#43</button>
+        <button class="orange_paragraph" onclick="increaseAmount(this)">&#43</button>
         <p>${cart[i][3]}€</p>
-        <button class="orange_paragraph tooltip" onclick="removeItemFromCart(this)">&#128465</button></div>
+        <button class="orange_paragraph" onclick="removeItemFromCart(this)">&#128465</button></div>
         </div>`
     }
     return cartItems
@@ -85,7 +90,7 @@ function renderCartPlaceholder() {
         cartItemBox.innerHTML = `
         <p class="cartPlaceholder">Füge leckere Gerichte zu deiner Bestellung hinzu</p>`
         return false
-    } else if(cart.length < 1 && setOrder === true){
+    } else if (cart.length < 1 && setOrder === true) {
         cartItemBox.innerHTML = `
         <p class="cartPlaceholder">
         Ihre Test-Bestellung wurde entgegen genommen!<br>
@@ -93,8 +98,8 @@ function renderCartPlaceholder() {
         </p>`
         setOrder = false;
         return false
-    } else{return true}
-    
+    } else { return true }
+
 }
 
 function renderBillingInfo() {
